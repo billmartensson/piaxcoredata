@@ -13,6 +13,8 @@
 		ABCBCB2227424EB2006B1D05 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABCBCB2127424EB2006B1D05 /* Preview Assets.xcassets */; };
 		ABCBCB2427424EB2006B1D05 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCBCB2327424EB2006B1D05 /* Persistence.swift */; };
 		ABCBCB2727424EB2006B1D05 /* piaxcoredata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABCBCB2527424EB2006B1D05 /* piaxcoredata.xcdatamodeld */; };
+		ABCBCB2E2742600F006B1D05 /* PersonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCBCB2D2742600F006B1D05 /* PersonDetail.swift */; };
+		ABCBCB3027426CF2006B1D05 /* TodoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCBCB2F27426CF2006B1D05 /* TodoDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		ABCBCB2127424EB2006B1D05 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ABCBCB2327424EB2006B1D05 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		ABCBCB2627424EB2006B1D05 /* piaxcoredata.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = piaxcoredata.xcdatamodel; sourceTree = "<group>"; };
+		ABCBCB2D2742600F006B1D05 /* PersonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetail.swift; sourceTree = "<group>"; };
+		ABCBCB2F27426CF2006B1D05 /* TodoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 			children = (
 				ABCBCB1A27424EB1006B1D05 /* piaxcoredataApp.swift */,
 				ABCBCB1C27424EB1006B1D05 /* ContentView.swift */,
+				ABCBCB2F27426CF2006B1D05 /* TodoDetail.swift */,
+				ABCBCB2D2742600F006B1D05 /* PersonDetail.swift */,
 				ABCBCB1E27424EB2006B1D05 /* Assets.xcassets */,
 				ABCBCB2327424EB2006B1D05 /* Persistence.swift */,
 				ABCBCB2527424EB2006B1D05 /* piaxcoredata.xcdatamodeld */,
@@ -143,9 +149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABCBCB3027426CF2006B1D05 /* TodoDetail.swift in Sources */,
 				ABCBCB2427424EB2006B1D05 /* Persistence.swift in Sources */,
 				ABCBCB1D27424EB1006B1D05 /* ContentView.swift in Sources */,
 				ABCBCB2727424EB2006B1D05 /* piaxcoredata.xcdatamodeld in Sources */,
+				ABCBCB2E2742600F006B1D05 /* PersonDetail.swift in Sources */,
 				ABCBCB1B27424EB1006B1D05 /* piaxcoredataApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

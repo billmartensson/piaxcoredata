@@ -12,29 +12,54 @@ struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \Todothing.isdone, ascending: true)],
         animation: .default)
-    private var items: FetchedResults<Item>
+    private var items: FetchedResults<Todothing>
 
+    @State var addtodotitle = ""
+    
+    
     var body: some View {
         NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
-                    }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
+            VStack {
+                
+                HStack {
+                    TextField("Sak att göra", text: $addtodotitle)
+                    
                     Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                        Text("Lägg till")
+                    }
+                }.padding(.horizontal)
+                
+                List {
+                    ForEach(items) { item in
+                        NavigationLink {
+                            //PersonDetail(theperson: item)
+                            TodoDetail(currenttodo: item)
+                        } label: {
+                            VStack {
+                                
+                                if(item.isdone)
+                                {
+                                    Text(item.todotitle!)
+                                        .strikethrough()
+                                } else {
+                                    Text(item.todotitle!)
+                                        
+                                }
+                            }
+                        }
+                    }
+                    .onDelete(perform: deleteItems)
+                }
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        EditButton()
+                    }
+                    ToolbarItem {
+                        Button(action: addItem) {
+                            Label("Add Item", systemImage: "plus")
+                        }
                     }
                 }
             }
@@ -44,9 +69,16 @@ struct ContentView: View {
 
     private func addItem() {
         withAnimation {
+            /*
             let newItem = Item(context: viewContext)
             newItem.timestamp = Date()
-
+            newItem.firstname = "Bill"
+            */
+            
+            let newTodo = Todothing(context: viewContext)
+            newTodo.todotitle = addtodotitle
+            newTodo.tododescription = "Test av beskrivning"
+            
             do {
                 try viewContext.save()
             } catch {
@@ -74,7 +106,7 @@ struct ContentView: View {
     }
 }
 
-private let itemFormatter: DateFormatter = {
+let itemFormatter: DateFormatter = {
     let formatter = DateFormatter()
     formatter.dateStyle = .short
     formatter.timeStyle = .medium
