@@ -15,6 +15,7 @@
 		ABCBCB2727424EB2006B1D05 /* piaxcoredata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABCBCB2527424EB2006B1D05 /* piaxcoredata.xcdatamodeld */; };
 		ABCBCB2E2742600F006B1D05 /* PersonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCBCB2D2742600F006B1D05 /* PersonDetail.swift */; };
 		ABCBCB3027426CF2006B1D05 /* TodoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCBCB2F27426CF2006B1D05 /* TodoDetail.swift */; };
+		ABCBCB3427428C52006B1D05 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABCBCB3327428C52006B1D05 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,9 @@
 		ABCBCB2627424EB2006B1D05 /* piaxcoredata.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = piaxcoredata.xcdatamodel; sourceTree = "<group>"; };
 		ABCBCB2D2742600F006B1D05 /* PersonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetail.swift; sourceTree = "<group>"; };
 		ABCBCB2F27426CF2006B1D05 /* TodoDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoDetail.swift; sourceTree = "<group>"; };
+		ABCBCB3127428C4B006B1D05 /* piaxcoredata.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = piaxcoredata.entitlements; sourceTree = "<group>"; };
+		ABCBCB3327428C52006B1D05 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		ABCBCB3527428CD1006B1D05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABCBCB3427428C52006B1D05 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +50,7 @@
 			children = (
 				ABCBCB1927424EB1006B1D05 /* piaxcoredata */,
 				ABCBCB1827424EB1006B1D05 /* Products */,
+				ABCBCB3227428C52006B1D05 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +65,8 @@
 		ABCBCB1927424EB1006B1D05 /* piaxcoredata */ = {
 			isa = PBXGroup;
 			children = (
+				ABCBCB3527428CD1006B1D05 /* Info.plist */,
+				ABCBCB3127428C4B006B1D05 /* piaxcoredata.entitlements */,
 				ABCBCB1A27424EB1006B1D05 /* piaxcoredataApp.swift */,
 				ABCBCB1C27424EB1006B1D05 /* ContentView.swift */,
 				ABCBCB2F27426CF2006B1D05 /* TodoDetail.swift */,
@@ -77,6 +85,14 @@
 				ABCBCB2127424EB2006B1D05 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ABCBCB3227428C52006B1D05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABCBCB3327428C52006B1D05 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,12 +298,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = piaxcoredata/piaxcoredata.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"piaxcoredata/Preview Content\"";
 				DEVELOPMENT_TEAM = 6SGQZ32758;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = piaxcoredata/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -311,12 +329,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = piaxcoredata/piaxcoredata.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"piaxcoredata/Preview Content\"";
 				DEVELOPMENT_TEAM = 6SGQZ32758;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = piaxcoredata/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
